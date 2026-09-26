@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Surendra Reddy | Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #0d6efd, #6610f2);
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #ffd43b !important;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+            padding-top: 70px;
+        }
+
+        .profile-img {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 7px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: bold;
+            color: #212529;
+        }
+
+        .hero h1 span {
+            color: #0d6efd;
+        }
+
+        .typing {
+            color: #6610f2;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: bold;
+            color: #212529;
+        }
+
+        .section-title span {
+            color: #0d6efd;
+        }
+
+        /* Cards */
+        .custom-card {
+            border: none;
+            border-radius: 20px;
+            padding: 25px;
+            height: 100%;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.4s;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .education-icon {
+            font-size: 45px;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+
+        /* Skills */
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            height: 12px;
+            border-radius: 20px;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+            color: white;
+            border-radius: 25px;
+            padding: 50px;
+        }
+
+        /* Button */
+        .btn-custom {
+            background: #0d6efd;
+            color: white;
+            border-radius: 30px;
+            padding: 12px 25px;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: #6610f2;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 25px;
+        }
+
+        /* Scroll animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media(max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .profile-img {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#home">
+            Surendra Reddy
+        </a>
+
+        <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-5 text-center">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsS50edMbKaeywv_icOKdwjcjaCs68-z14JLdCDw4CNhLwrpdZhRDgECA&s=10"
+                    alt="Surendra Reddy"
+                    class="profile-img">
+
+            </div>
+
+            <div class="col-md-7">
+
+                <p class="text-primary fw-bold">WELCOME TO MY PORTFOLIO</p>
+
+                <h1>
+                    Hi, I'm <span>Surendra Reddy</span>
+                </h1>
+
+                <h3>
+                    I am a <span class="typing" id="typing"></span>
+                </h3>
+
+                <p class="lead mt-3">
+                    A passionate student who is interested in technology,
+                    programming and learning new skills.
+                </p>
+
+                <a href="#about" class="btn btn-custom mt-3">
+                    Explore My Portfolio
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-9">
+
+                <div class="custom-card text-center fade-in">
+
+                    <h3>Surendra Reddy</h3>
+
+                    <p class="mt-3">
+                        Hello! My name is <strong>Surendra Reddy</strong>.
+                        I am a student of
+                        <strong>Sir CR Reddy College of Engineering</strong>.
+                        I am interested in programming, web development
+                        and learning new technologies.
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+                            <p>
+                                <strong>Registration No:</strong><br>
+                                25B81A12C9
+                            </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>
+                                <strong>CGPA:</strong><br>
+                                7.5
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education" class="bg-light">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My <span>Education</span>
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- College -->
+            <div class="col-md-4">
+
+                <div class="custom-card text-center fade-in">
+
+                    <i class="bi bi-mortarboard-fill education-icon"></i>
+
+                    <h4>Engineering</h4>
+
+                    <p class="text-primary fw-bold">
+                        Sir CR Reddy College of Engineering
+                    </p>
+
+                    <p>
+                        CGPA: <strong>7.5</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Intermediate -->
+            <div class="col-md-4">
+
+                <div class="custom-card text-center fade-in">
+
+                    <i class="bi bi-book-fill education-icon"></i>
+
+                    <h4>Intermediate</h4>
+
+                    <p class="text-primary fw-bold">
+                        Sri Viswa Junior College
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- School -->
+            <div class="col-md-4">
+
+                <div class="custom-card text-center fade-in">
+
+                    <i class="bi bi-building-fill education-icon"></i>
+
+                    <h4>School</h4>
+
+                    <p class="text-primary fw-bold">
+                        Suresh High School
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8">
+
+                <div class="custom-card fade-in">
+
+                    <div class="skill">
+
+                        <div class="d-flex justify-content-between">
+                            <strong>HTML</strong>
+                            <span>90%</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar bg-primary"
+                                 style="width:90%">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div class="d-flex justify-content-between">
+                            <strong>CSS</strong>
+                            <span>80%</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar bg-success"
+                                 style="width:80%">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div class="d-flex justify-content-between">
+                            <strong>JavaScript</strong>
+                            <span>75%</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar bg-warning"
+                                 style="width:75%">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div class="d-flex justify-content-between">
+                            <strong>C Programming</strong>
+                            <span>80%</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar bg-danger"
+                                 style="width:80%">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box text-center fade-in">
+
+            <h2>Let's Connect</h2>
+
+            <p class="mt-3">
+                Thank you for visiting my portfolio.
+            </p>
+
+            <p>
+                Feel free to connect with me and know more about my work.
+            </p>
+
+            <button class="btn btn-light rounded-pill px-4"
+                    onclick="showMessage()">
+                <i class="bi bi-hand-thumbs-up"></i>
+                Say Hello
+            </button>
+
+            <p id="helloMessage"
+               class="mt-4 fw-bold"
+               style="display:none;">
+                👋 Hello! Thanks for visiting my portfolio!
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="text-center">
+
+    <p class="mb-0">
+        © <span id="year"></span> Surendra Reddy.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+    // ================= TYPING ANIMATION =================
+
+    const words = [
+        "Student",
+        "Web Developer",
+        "Programmer",
+        "Tech Enthusiast"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeEffect() {
+
+        const typing = document.getElementById("typing");
+
+        const currentWord = words[wordIndex];
+
+        if (!deleting) {
+
+            typing.textContent =
+                currentWord.substring(0, charIndex + 1);
+
+            charIndex++;
+
+            if (charIndex === currentWord.length) {
+
+                deleting = true;
+
+                setTimeout(typeEffect, 1200);
+
+                return;
+            }
+
+        } else {
+
+            typing.textContent =
+                currentWord.substring(0, charIndex - 1);
+
+            charIndex--;
+
+            if (charIndex === 0) {
+
+                deleting = false;
+
+                wordIndex++;
+
+                if (wordIndex === words.length) {
+                    wordIndex = 0;
+                }
+
+            }
+        }
+
+        setTimeout(typeEffect, deleting ? 60 : 100);
+    }
+
+    typeEffect();
+
+
+    // ================= HELLO BUTTON =================
+
+    function showMessage() {
+
+        const message =
+            document.getElementById("helloMessage");
+
+        message.style.display = "block";
+
+    }
+
+
+    // ================= CURRENT YEAR =================
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    // ================= SCROLL ANIMATION =================
+
+    const observer = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+    document.querySelectorAll(".fade-in")
+        .forEach(function(element) {
+
+            observer.observe(element);
+
+        });
+
+</script>
+
+</body>
+</html>
